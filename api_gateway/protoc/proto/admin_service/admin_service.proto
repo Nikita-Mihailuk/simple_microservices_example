@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package admin_service;
+
+option go_package = "nikita.mihailuk.adminService.v1;adminServicev1";
+
+service Admin {
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+message DeleteUserRequest{
+  int64 user_id = 1;
+}
+
+message DeleteUserResponse{
+  bool success = 1;
+}

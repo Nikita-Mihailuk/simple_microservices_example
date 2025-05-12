@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package user_service;
+
+option go_package = "nikita.mihailuk.userService.v1;userServicev1";
+
+service User {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc GetAllUsers(GetAllUsersRequest) returns (GetAllUsersResponse);
+}
+
+message CreateUserRequest{
+  string name = 1;
+  int32 age = 2;
+}
+
+message CreateUserResponse{
+  int64 user_id = 1;
+}
+
+message GetAllUsersRequest{}
+
+message GetAllUsersResponse{
+  repeated UserData users = 1;
+}
+
+
+message UserData {
+  int64 user_id = 1;
+  string name = 2;
+  int32 age = 3;
+}

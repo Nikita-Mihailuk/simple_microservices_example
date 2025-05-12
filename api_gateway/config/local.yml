@@ -1,0 +1,10 @@
+server:
+  port: 8080
+userService:
+  host: localhost
+  port: 5555
+  timeout: 15s
+adminService:
+  host: localhost
+  port: 5556
+  timeout: 15s

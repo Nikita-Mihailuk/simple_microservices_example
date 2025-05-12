@@ -1,0 +1,12 @@
+grpc:
+  port: 5556
+db:
+  host: localhost
+  port: 5432
+  userName: postgres
+  password: "00000000"
+  name: simple_microservices_example
+userService:
+  host: localhost
+  port: 5555
+  timeout: 15s
